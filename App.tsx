@@ -24,7 +24,7 @@ import {
   Lock,
   Unlock
 } from 'lucide-react';
-import { Logo } from './components/Logo';
+import Logo from './components/Logo';
 import { SlideLayout, itemVariants } from './components/SlideLayout';
 import { SlideData } from './types';
 

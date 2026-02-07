@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --brand-orange: #ff6600;
+}
+
+body {
+    background-color: #000;
+    color: #e2e8f0;
+    overflow: hidden;
+    overscroll-behavior-y: none;
+}
+
+.perspective-container {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.perspective-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    bottom: -50%;
+    left: -50%;
+    background-image:
+        linear-gradient(to right, rgba(255, 102, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 102, 0, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: rotateX(60deg);
+    transform-origin: 50% 0;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
+    /* Animation handled by tailwind class animate-grid-flow */
+}
+
+/* Custom scrollbar for notes */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
